@@ -3,4 +3,4 @@ Install-WindowsFeature -Name Web-Mgmt-Service,Web-Asp-Net45,Web-AppInit,NET-WCF-
 Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WebManagement\Server -Name EnableRemoteManagement -Value 1;
 Set-Service -Name WMSvc -StartupType Automatic;
 Start-Service WMSvc;
-Set-DtcNetworkSetting -DtcName Local -AuthenticationLevel Incoming -InboundTransactionsEnabled 1 -OutboundTransactionsEnabled 1 -RemoteClientAccessEnabled 1 -Confirm:$false
+Set-DtcNetworkSetting -DtcName Local -AuthenticationLevel Incoming -InboundTransactionsEnabled 1 -OutboundTransactionsEnabled 1 -RemoteClientAccessEnabled 1 -Confirm:$false;
